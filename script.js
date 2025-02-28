@@ -2,7 +2,7 @@
 const firstWords = prompt("Введіть ваше ім'я").trim();
 const secondtWords =  prompt("Введіть ваш email").trim()
 
-if (firstWords !== "" || secondtWords !== ""){
+if (firstWords !== "" && secondtWords !== ""){
     alert("Все правильно")
 } else{
     alert("Ви ввели не правильні дані")
@@ -30,6 +30,7 @@ if (whatWord.includes(word)) {
 
 // #4 Створити розмітку з формою з полями введення та кнопкою. При натисканні на кнопку перевіряти, чи введене число більше за 10 та менше за 20, якщо так, то виводити повідомлення "Число входить в діапазон від 10 до 20", якщо ні — "Число не входить в діапазон від 10 до 20".
 const whatNumber = prompt("Введіть число в діапазоні від 10 до 20");
+
 if (whatNumber > 10 && whatNumber < 20 ){
     alert("Все вірно")
 } else {
@@ -37,11 +38,12 @@ if (whatNumber > 10 && whatNumber < 20 ){
 }
 
 // #5 Створити розмітку з формою з полями введення та кнопкою. При натисканні на кнопку перевіряти, чи введені дані правильно заповнені, якщо так, то перенаправляти на іншу сторінку, якщо ні — виводити повідомлення про помилку. Правильно заповнені дані: ім'я містить не менше 3 символів, email містить символ @ та крапку після неї, пароль містить не менше 6 символів.
-const userName = prompt("Введіть ваше ім'я(не менше 3 символів)");
+const userName = prompt("Введіть ваше ім'я");
 const userEmail = prompt("Введіть ваш email");
-const userPassword = prompt("Введіть ваш пароль(не менше 6 символів)");
-if(userName > 3 || userEmail.includes("@") || userEmail.includes(".") || userPassword > 6){
- alert("Ви переправляєтесь на наступну сторінку")
-} else{
-alert("Ви ввели неправильні дані!")
+const userPassword = prompt("Введіть ваш пароль");
+
+if (userName.length >= 3 && userEmail.includes("@") && userEmail.includes(".") && userPassword.length >= 6) {
+    alert("Ви переправляєтесь на наступну сторінку")
+} else {
+    alert("Ви ввели неправильні дані!")
 }
