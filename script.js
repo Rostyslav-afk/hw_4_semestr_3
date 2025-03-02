@@ -1,8 +1,8 @@
 // #1 Створити розмітку з двома текстовими полями та кнопкою. При натисканні на кнопку перевіряти, чи обидва поля містять значення, якщо так, то виводити повідомлення "Обидва поля заповнені", якщо ні — "Не всі поля заповнені".
 const firstWords = prompt("Введіть ваше ім'я").trim();
-const secondtWords =  prompt("Введіть ваш email").trim()
+const secondtWords =  prompt("Введіть ваш пароль").trim()
 
-if (firstWords !== "" && secondtWords !== ""){
+if (firstWords.length > 0 && secondtWords.length > 0){
     alert("Все правильно")
 } else{
     alert("Ви ввели не правильні дані")
